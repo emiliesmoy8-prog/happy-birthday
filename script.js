@@ -189,6 +189,7 @@ function startLoading() {
 
 }
 
+
 // ---------- SPINNER ----------
 
 function rotateSpinner(){
