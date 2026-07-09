@@ -175,7 +175,7 @@ function startLoading() {
     setInterval(() => {
 
         loadingText.textContent =
-            "Do something that makes you feel alive... (Loading" +
+            "Laugh... (Loading" +
             ".".repeat(dots) +
             ")";
 
