@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Birthday Dashboard</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="background-glow"></div>
+
+<div class="card">
+
+    <!-- MUSIC -->
+
+    <div class="music-player">
+
+        <button id="playButton">▶</button>
+
+        <span id="musicNote">🎵</span>
+
+    </div>
+
+    <!-- HEADER -->
+
+    <h1>С днём рождения!</h1>
+
+    <h2>Birthday Dashboard</h2>
+
+    <hr>
+
+    <!-- USER -->
+
+    <div class="info-grid">
+
+        <div class="info-card">
+
+            <div class="label">User</div>
+
+            <div class="value">Old Bitch</div>
+
+        </div>
+
+        <div class="info-card">
+
+            <div class="label">Age</div>
+
+            <div class="value">34</div>
+
+        </div>
+
+    </div>
+
+    <hr>
+
+    <!-- TODAY -->
+
+    <section>
+
+        <h3>Today's Mission</h3>
+
+        <div class="mission">
+            <span>✓</span>
+            <span>103 Coffee</span>
+        </div>
+
+        <div class="mission">
+            <span>✓</span>
+            <span>Read a good book</span>
+        </div>
+
+        <div class="mission">
+
+            <span class="spinner">⟳</span>
+
+            <span id="loadingText">
+
+                Laugh... (Loading)
+
+            </span>
+
+        </div>
+
+    </section>
+
+    <hr>
+
+    <!-- PROGRESS -->
+
+    <section>
+
+        <div class="label progress-label">
+
+            Energy
+
+        </div>
+
+        <div class="progress">
+
+            <div id="energyBar"></div>
+
+        </div>
+
+        <div class="label progress-label">
+
+            Happiness
+
+        </div>
+
+        <div class="progress">
+
+            <div id="happyBar"></div>
+
+        </div>
+
+    </section>
+
+    <hr>
+
+    <!-- FINAL -->
+
+    <section class="final">
+
+        <h3>
+
+            FINAL MISSION
+
+        </h3>
+
+        <p>
+
+            🕷 Claim your reward.
+
+        </p>
+
+        <button class="ticket" id="ticketButton">
+
+            CLAIM REWARD
+
+        </button>
+
+    </section>
+
+</div>
+<div id="rewardModal" class="modal hidden">
+
+    <div class="modal-card">
+
+     <div class="spider">
+<svg viewBox="0 0 100 100" width="42" height="42" aria-hidden="true">
+  <path fill="#D61F26" d="
+    M50 6
+    L44 24
+    L34 16
+    L26 26
+    L38 34
+    L18 40
+    L36 44
+    L18 60
+    L40 52
+    L30 84
+    L46 58
+    L50 96
+    L54 58
+    L70 84
+    L60 52
+    L82 60
+    L64 44
+    L82 40
+    L62 34
+    L74 26
+    L66 16
+    L56 24
+    Z"/>
+</svg>
+</div>
+
+        <h2>MISSION COMPLETE ✓</h2>
+
+
+        <div class="modal-progress">
+
+            <div id="modalBar"></div>
+
+        </div>
+
+        <button id="viewReward">
+            View Surprise
+        </button>
+
+        <button id="closeModal">
+    Close
+</button>
+
+    </div>
+
+</div>
+<script src="script.js"></script>
+
+</body>
+
+</html>
