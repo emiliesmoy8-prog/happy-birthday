@@ -168,24 +168,24 @@ function breatheBars(){
 
 // ---------- LOADING ----------
 
-function startLoading(){
+function startLoading() {
 
     let dots = 1;
 
     setInterval(() => {
 
         loadingText.textContent =
-        "Laugh... (Loading" + ".".repeat(dots) + ")";
+            "Do something that makes you feel alive... (Loading" +
+            ".".repeat(dots) +
+            ")";
 
         dots++;
 
-        if(dots > 3){
-
+        if (dots > 3) {
             dots = 1;
-
         }
 
-    },550);
+    }, 550);
 
 }
 
