@@ -33,10 +33,12 @@ music.preload = "auto";
 window.addEventListener("load", () => {
 
     animateBars();
-
     startLoading();
-
     rotateSpinner();
+
+    setTimeout(() => {
+        launchConfetti();
+    }, 800);
 
 });
 
@@ -286,8 +288,3 @@ function launchConfetti() {
     });
 }
 
-window.addEventListener("pageshow", () => {
-    setTimeout(() => {
-        launchConfetti();
-    }, 500);
-});
