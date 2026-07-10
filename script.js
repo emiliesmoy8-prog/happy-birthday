@@ -280,21 +280,20 @@ setInterval(()=>{
 
 function launchConfetti() {
 
+    // Launch confetti
     confetti({
-        particleCount:180,
-        spread:100,
-        startVelocity:45,
-        origin:{ y:0.6 },
-        scalar:1.1
+        particleCount: 180,
+        spread: 100,
+        startVelocity: 45,
+        origin: { y: 0.6 },
+        scalar: 1.1
     });
 
-    // Spider drops after confetti
+    // Drop the spider after the confetti
     setTimeout(() => {
-
         document
             .getElementById("spider-container")
             .classList.add("spider-drop");
-
     }, 3200);
 
 }
