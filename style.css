@@ -777,26 +777,20 @@ border:1px solid rgba(255,255,255,.10);
 
 }
 /* ===========================
-   MOTORBIKE DELIVERY
+   MOTORBIKE
 =========================== */
 
 #bike-container{
     position:fixed;
-    top:90px;
-    left:0;
-    width:100vw;
-    height:120px;
+    inset:0;
     pointer-events:none;
     z-index:9999;
 }
 
 #bike-wrapper{
     position:absolute;
+    top:90px;
     left:-120px;
-    top:0;
-}
-.bike-drive{
-    animation:rideBike 6s linear forwards;
 }
 
 #bike{
@@ -806,58 +800,67 @@ border:1px solid rgba(255,255,255,.10);
 
 #gift{
     position:absolute;
-    right:-8px;
     top:8px;
+    right:-12px;
     font-size:22px;
 }
 
+/* bike animation */
 
-/* Gift drops */
-
-@keyframes dropGift{
-
-    /* Ride with the bike */
-    0%,60%{
-        transform:translate(0,0);
-    }
-
-    /* Drop */
-    70%{
-        transform:translate(0,55px);
-    }
-
-    /* Bounce */
-    78%{
-        transform:translate(0,45px);
-    }
-
-    /* Rest */
-    85%,100%{
-        transform:translate(0,55px);
-    }
-
+.bike-drive{
+    animation:bikeRide 5s linear forwards;
 }
 
-@keyframes rideBike {
+@keyframes bikeRide{
 
-    /* Start off-screen */
+    /* enter */
+
     0%{
         left:-120px;
     }
 
-    /* Drive to center */
+    /* middle */
+
     40%{
         left:45vw;
     }
 
-    /* Pause in the center */
+    /* stop */
+
     60%{
         left:45vw;
     }
 
-    /* Continue driving */
+    /* exit */
+
     100%{
         left:110vw;
+    }
+
+}
+
+/* gift drops */
+
+.gift-drop{
+    animation:giftDrop .8s ease forwards;
+}
+
+@keyframes giftDrop{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    70%{
+        transform:translateY(55px);
+    }
+
+    85%{
+        transform:translateY(45px);
+    }
+
+    100%{
+        transform:translateY(55px);
     }
 
 }

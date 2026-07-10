@@ -288,14 +288,35 @@ function launchConfetti(){
         scalar:1.1
     });
 
-    // wait until confetti finishes
-    setTimeout(()=>{
+    // Bike starts after confetti
+    setTimeout(() => {
 
         document
-            .getElementById("bike-container")
+            .getElementById("bike-wrapper")
             .classList.add("bike-drive");
 
-    },5000);
+    }, 5000);
+
+    // Drop the gift while the bike is stopped
+    setTimeout(() => {
+
+        const bike = document.getElementById("bike");
+        const gift = document.getElementById("gift");
+
+        // Get gift's current screen position
+        const rect = gift.getBoundingClientRect();
+
+        // Move gift out of the bike
+        document.body.appendChild(gift);
+
+        // Freeze it in place
+        gift.style.position = "fixed";
+        gift.style.left = rect.left + "px";
+        gift.style.top = rect.top + "px";
+
+        // Drop animation
+        gift.classList.add("gift-drop");
+
+    }, 8000);
 
 }
-
