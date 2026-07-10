@@ -311,7 +311,15 @@ function launchConfetti() {
 
                 gift.style.position = "absolute";
                 gift.style.left = (window.scrollX + rect.left) + "px";
-                gift.style.top = (window.scrollY + rect.top) + "px";
+                if (window.innerWidth <= 768) {
+    const title = document.getElementById("birthday-title").getBoundingClientRect();
+
+    gift.style.top =
+        (window.scrollY + title.bottom + 12) + "px";
+} else {
+    gift.style.top =
+        (window.scrollY + rect.top) + "px";
+}
 
                 gift.classList.add("gift-drop");
 

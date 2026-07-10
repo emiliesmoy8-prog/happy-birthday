@@ -98,17 +98,11 @@ linear-gradient(
 /* ---------- MUSIC ---------- */
 
 .music-player{
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
-    gap:10px;
-
-    margin-bottom:24px;
-
+    width:100%;
+    margin:0 auto 24px;
 }
 
 #playButton{
@@ -124,11 +118,6 @@ linear-gradient(
     color:#D3D7DD;
 }
 
-#musicNote{
-    font-size:18px;
-    color:#A8ADB5;
-    transition:.35s;
-}
 
 /* ---------- TITLES ---------- */
 
