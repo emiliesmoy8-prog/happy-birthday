@@ -37,8 +37,8 @@ window.addEventListener("load", () => {
     rotateSpinner();
 
     setTimeout(() => {
-        launchConfetti();
-    }, 800);
+    launchConfetti();
+}, 100);
 
 });
 
