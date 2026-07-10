@@ -277,46 +277,52 @@ setInterval(()=>{
 
 },9000);
 // ---------- CONFETTI ----------
-
-function launchConfetti(){
+function launchConfetti() {
 
     confetti({
-        particleCount:180,
-        spread:100,
-        startVelocity:45,
-        origin:{ y:0.6 },
-        scalar:1.1
+        particleCount: 180,
+        spread: 100,
+        startVelocity: 45,
+        origin: { y: 0.6 },
+        scalar: 1.1
     });
 
-    // Bike starts after confetti
+    const bikeWrapper = document.getElementById("bike-wrapper");
+    const gift = document.getElementById("gift");
+
+    // Start bike after confetti
     setTimeout(() => {
 
-        document
-            .getElementById("bike-wrapper")
-            .classList.add("bike-drive");
+        bikeWrapper.classList.add("bike-drive");
+
+        // Wait until bike reaches the drop position
+        function watchBike() {
+
+            const bikeRect = bikeWrapper.getBoundingClientRect();
+
+            // Change this number slightly if needed
+            const dropX = window.innerWidth * 0.48;
+
+            if (bikeRect.right >= dropX) {
+
+                const rect = gift.getBoundingClientRect();
+
+                document.body.appendChild(gift);
+
+                gift.style.position = "absolute";
+                gift.style.left = (window.scrollX + rect.left) + "px";
+                gift.style.top = (window.scrollY + rect.top) + "px";
+
+                gift.classList.add("gift-drop");
+
+                return;
+            }
+
+            requestAnimationFrame(watchBike);
+        }
+
+        requestAnimationFrame(watchBike);
 
     }, 5000);
-
-    // Drop the gift while the bike is stopped
-    setTimeout(() => {
-
-        const bike = document.getElementById("bike");
-        const gift = document.getElementById("gift");
-
-        // Get gift's current screen position
-        const rect = gift.getBoundingClientRect();
-
-        // Move gift out of the bike
-        document.body.appendChild(gift);
-
-        // Freeze it in place
-       gift.style.position = "absolute";
-        gift.style.left = (window.scrollX + rect.left) + "px";
-gift.style.top = (window.scrollY + rect.top) + "px";
-
-        // Drop animation
-        gift.classList.add("gift-drop");
-
-    }, 9200);
 
 }
