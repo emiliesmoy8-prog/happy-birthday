@@ -274,29 +274,20 @@ setInterval(()=>{
     },1200);
 
 },9000);
+// ---------- CONFETTI ----------
+
 function launchConfetti() {
-
-    const end = Date.now() + 4000;
-
-    (function frame() {
-
-        confetti({
-            particleCount: 3,
-            startVelocity: 35,
-            spread: 360,
-            ticks: 80,
-            origin: {
-                x: Math.random(),
-                y: Math.random() * 0.5
-            }
-        });
-
-        if (Date.now() < end) {
-            requestAnimationFrame(frame);
-        }
-
-    })();
-
+    confetti({
+        particleCount: 180,
+        spread: 100,
+        startVelocity: 45,
+        origin: { y: 0.6 },
+        scalar: 1.1
+    });
 }
 
-launchConfetti();
+window.addEventListener("pageshow", () => {
+    setTimeout(() => {
+        launchConfetti();
+    }, 500);
+});
