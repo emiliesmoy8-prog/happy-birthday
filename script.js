@@ -318,7 +318,7 @@ function launchConfetti() {
 
                 if (window.innerWidth <= 768) {
                     gift.style.top =
-                        (window.scrollY + title.bottom - 8) + "px";
+                        (window.scrollY + title.bottom - 40) + "px";
                 } else {
                     gift.style.top =
                         (window.scrollY + rect.top) + "px";
