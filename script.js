@@ -30,15 +30,15 @@ music.preload = "auto";
 
 // ---------- PAGE LOAD ----------
 
-window.addEventListener("load", () => {
+document.addEventListener("DOMContentLoaded", () => {
 
+    // Fire confetti immediately
+    launchConfetti();
+
+    // Start the rest of the page
     animateBars();
     startLoading();
     rotateSpinner();
-
-    setTimeout(() => {
-    launchConfetti();
-}, 100);
 
 });
 
