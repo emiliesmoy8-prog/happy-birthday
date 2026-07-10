@@ -278,23 +278,24 @@ setInterval(()=>{
 },9000);
 // ---------- CONFETTI ----------
 
-function launchConfetti() {
+function launchConfetti(){
 
-    // Launch confetti
     confetti({
-        particleCount: 180,
-        spread: 100,
-        startVelocity: 45,
-        origin: { y: 0.6 },
-        scalar: 1.1
+        particleCount:180,
+        spread:100,
+        startVelocity:45,
+        origin:{ y:0.6 },
+        scalar:1.1
     });
 
-    // Drop the spider after the confetti
-    setTimeout(() => {
+    // wait until confetti finishes
+    setTimeout(()=>{
+
         document
-            .getElementById("spider-container")
-            .classList.add("spider-drop");
-    }, 5000);
+            .getElementById("bike-container")
+            .classList.add("bike-drive");
+
+    },5000);
 
 }
 

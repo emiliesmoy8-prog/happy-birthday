@@ -776,69 +776,88 @@ border:1px solid rgba(255,255,255,.10);
     }
 
 }
-/* ===== Spider Animation ===== */
+/* ===========================
+   MOTORBIKE DELIVERY
+=========================== */
 
-#spider-container{
+#bike-container{
     position:fixed;
-    top:-220px;
-    left:75%;
-    transform:translateX(-50%);
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    z-index:9999;
+    top:90px;
+    left:0;
+    width:100vw;
+    height:120px;
     pointer-events:none;
+    z-index:9999;
 }
 
-.thread{
-    width:2px;
-    height:200px;
-    background:rgba(255,255,255,.65);
+#bike-wrapper{
+    position:absolute;
+    left:-120px;
+    top:0;
+}
+.bike-drive{
+    animation:rideBike 6s linear forwards;
 }
 
-#spider{
-    width:32px;
-    height:auto;
-    margin-top:-2px;
-    filter:drop-shadow(0 2px 6px rgba(0,0,0,.25));
+#bike{
+    width:70px;
+    display:block;
 }
 
-.spider-drop{
-    animation: spiderDrop 5s ease-in-out forwards;
+#gift{
+    position:absolute;
+    right:-8px;
+    top:8px;
+    font-size:22px;
 }
 
-@keyframes spiderDrop {
 
-    0% {
-        transform: translate(-50%, -220px);
+/* Gift drops */
+
+@keyframes dropGift{
+
+    /* Ride with the bike */
+    0%,60%{
+        transform:translate(0,0);
     }
 
-    20% {
-        transform: translate(-50%, 150px);
+    /* Drop */
+    70%{
+        transform:translate(0,55px);
     }
 
-    35% {
-        transform: translate(-50%, 150px) rotate(4deg);
+    /* Bounce */
+    78%{
+        transform:translate(0,45px);
     }
 
-    50% {
-        transform: translate(-50%, 150px) rotate(-4deg);
+    /* Rest */
+    85%,100%{
+        transform:translate(0,55px);
     }
 
-    65% {
-        transform: translate(-50%, 150px) rotate(2deg);
-    }
-
-    80% {
-        transform: translate(-50%, 150px);
-    }
-
-    100% {
-        transform: translate(-50%, -220px);
-    }
 }
-@media (max-width: 600px) {
-    #spider-container {
-        left: 78%;
+
+@keyframes rideBike {
+
+    /* Start off-screen */
+    0%{
+        left:-120px;
     }
+
+    /* Drive to center */
+    40%{
+        left:45vw;
+    }
+
+    /* Pause in the center */
+    60%{
+        left:45vw;
+    }
+
+    /* Continue driving */
+    100%{
+        left:110vw;
+    }
+
 }
