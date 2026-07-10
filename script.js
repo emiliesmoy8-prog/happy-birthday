@@ -274,3 +274,29 @@ setInterval(()=>{
     },1200);
 
 },9000);
+function launchConfetti() {
+
+    const end = Date.now() + 4000;
+
+    (function frame() {
+
+        confetti({
+            particleCount: 3,
+            startVelocity: 35,
+            spread: 360,
+            ticks: 80,
+            origin: {
+                x: Math.random(),
+                y: Math.random() * 0.5
+            }
+        });
+
+        if (Date.now() < end) {
+            requestAnimationFrame(frame);
+        }
+
+    })();
+
+}
+
+launchConfetti();
