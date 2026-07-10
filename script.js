@@ -1,7 +1,6 @@
 // ---------- ELEMENTS ----------
 
 const playButton = document.getElementById("playButton");
-const musicNote = document.getElementById("musicNote");
 
 const energyBar = document.getElementById("energyBar");
 const happyBar = document.getElementById("happyBar");
@@ -48,27 +47,23 @@ playButton.addEventListener("click", () => {
 
     if (!playing) {
 
-        playing = true;
+    playing = true;
 
-        playButton.textContent = "⏸";
+    playButton.textContent = "⏸";
 
-        musicNote.classList.add("playing");
+    music.play();
 
-      music.play();
+} else {
 
-    } else {
+    playing = false;
 
-        playing = false;
-
-        playButton.textContent = "▶";
-
-        musicNote.classList.remove("playing");
+    playButton.textContent = "▶";
 
     music.pause();
 
-music.currentTime = 0;
+    music.currentTime = 0;
 
-    }
+}
 
 });
 
