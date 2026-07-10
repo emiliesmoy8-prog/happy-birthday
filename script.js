@@ -317,6 +317,6 @@ function launchConfetti(){
         // Drop animation
         gift.classList.add("gift-drop");
 
-    }, 8000);
+    }, 9500);
 
 }
