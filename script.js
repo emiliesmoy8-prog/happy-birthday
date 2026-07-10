@@ -294,7 +294,7 @@ function launchConfetti() {
         document
             .getElementById("spider-container")
             .classList.add("spider-drop");
-    }, 3200);
+    }, 5000);
 
 }
 
