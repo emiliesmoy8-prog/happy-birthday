@@ -789,20 +789,20 @@ border:1px solid rgba(255,255,255,.10);
 
 #bike-wrapper{
     position:absolute;
-    top:90px;
-    left:-120px;
+    top:65px;
+    left:-80px;
 }
 
 #bike{
-    width:70px;
+    width:55px;
     display:block;
 }
 
 #gift{
     position:absolute;
-    top:8px;
-    right:-12px;
-    font-size:22px;
+    top:6px;
+    right:-8px;
+    font-size:18px;
 }
 
 /* bike animation */
@@ -811,56 +811,54 @@ border:1px solid rgba(255,255,255,.10);
     animation:bikeRide 5s linear forwards;
 }
 
-@keyframes bikeRide{
-
-    /* enter */
+@keyframes bikeRide {
 
     0%{
-        left:-120px;
+        left:-80px;
     }
 
-    /* middle */
-
+    /* Stop in middle */
     40%{
-        left:45vw;
+        left:38%;
     }
 
-    /* stop */
-
+    /* Wait */
     60%{
-        left:45vw;
+        left:38%;
     }
 
-    /* exit */
-
+    /* Leave */
     100%{
-        left:110vw;
+        left:110%;
     }
 
 }
-
 /* gift drops */
 
 .gift-drop{
     animation:giftDrop .8s ease forwards;
 }
 
-@keyframes giftDrop{
+@keyframes bikeRide {
 
+    /* Start off screen */
     0%{
-        transform:translateY(0);
+        left:-80px;
     }
 
-    70%{
-        transform:translateY(55px);
+    /* Stop in the middle */
+    40%{
+        left:38%;
     }
 
-    85%{
-        transform:translateY(45px);
+    /* Wait while the gift drops */
+    60%{
+        left:38%;
     }
 
+    /* Drive away */
     100%{
-        transform:translateY(55px);
+        left:110%;
     }
 
 }
