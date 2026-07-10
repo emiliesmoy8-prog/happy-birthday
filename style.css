@@ -809,7 +809,7 @@ border:1px solid rgba(255,255,255,.10);
 /* bike animation */
 
 .bike-drive{
-    animation:bikeRide 5s linear forwards;
+    animation:bikeRide 6s linear forwards;
 }
 .gift-drop{
     animation:giftDrop .8s ease forwards;
@@ -840,11 +840,12 @@ border:1px solid rgba(255,255,255,.10);
         left:-80px;
     }
 
-    40%{
+    35%{
         left:38%;
     }
 
-    60%{
+    /* Pause */
+    65%{
         left:38%;
     }
 
