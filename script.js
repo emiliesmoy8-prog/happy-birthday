@@ -311,15 +311,18 @@ function launchConfetti() {
 
                 gift.style.position = "absolute";
                 gift.style.left = (window.scrollX + rect.left) + "px";
-                if (window.innerWidth <= 768) {
-    const title = document.getElementById("birthday-title").getBoundingClientRect();
 
-    gift.style.top =
-        (window.scrollY + title.bottom + 12) + "px";
-} else {
-    gift.style.top =
-        (window.scrollY + rect.top) + "px";
-}
+                const title = document
+                    .getElementById("birthday-title")
+                    .getBoundingClientRect();
+
+                if (window.innerWidth <= 768) {
+                    gift.style.top =
+                        (window.scrollY + title.bottom - 8) + "px";
+                } else {
+                    gift.style.top =
+                        (window.scrollY + rect.top) + "px";
+                }
 
                 gift.classList.add("gift-drop");
 
@@ -331,6 +334,6 @@ function launchConfetti() {
 
         requestAnimationFrame(watchBike);
 
-    }, 5000);
+    }, 600);
 
 }
