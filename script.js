@@ -310,9 +310,9 @@ function launchConfetti(){
         document.body.appendChild(gift);
 
         // Freeze it in place
-        gift.style.position = "fixed";
-        gift.style.left = rect.left + "px";
-        gift.style.top = rect.top + "px";
+       gift.style.position = "absolute";
+        gift.style.left = (window.scrollX + rect.left) + "px";
+gift.style.top = (window.scrollY + rect.top) + "px";
 
         // Drop animation
         gift.classList.add("gift-drop");
